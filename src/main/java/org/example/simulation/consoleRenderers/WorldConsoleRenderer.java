@@ -46,4 +46,9 @@ public class WorldConsoleRenderer {
             System.out.println(line);
         }
     }
+
+    public static void output(String message){
+        System.out.println(message);
+    }
+
 }

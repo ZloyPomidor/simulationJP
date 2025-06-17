@@ -8,14 +8,14 @@ import org.example.simulation.pathFinder.PathFinder;
 
 public abstract class Creature extends Entity {
 
-    private final int MAX_HP_VALUE;
+    private final int maxHpValue;
     private final Class<? extends Entity> target;
     private final int speed;
     private int hp;
 
-    public Creature(int hp, int MAX_HP_VALUE, Class<? extends Entity> target, int speed) {
+    public Creature(int hp, int maxHpValue, Class<? extends Entity> target, int speed) {
         this.hp = hp;
-        this.MAX_HP_VALUE = MAX_HP_VALUE;
+        this.maxHpValue = maxHpValue;
         this.target = target;
         this.speed = speed;
     }
@@ -41,7 +41,7 @@ public abstract class Creature extends Entity {
     }
 
     public void eit() {
-        if(getHp()< MAX_HP_VALUE){
+        if(getHp()< maxHpValue){
             hpApp();
         }
     }

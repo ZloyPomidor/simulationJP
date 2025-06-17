@@ -1,7 +1,7 @@
 package org.example.simulation;
 
+import org.example.simulation.consoleRenderers.WorldConsoleRenderer;
 import org.example.simulation.map.WorldMap;
-import org.example.simulation.consoleRenderers.ConsoleMessagesRenderer;
 import org.example.simulation.actions.Action;
 
 import java.util.List;
@@ -14,6 +14,7 @@ public class Simulation {
 
     private static final String STRING_MESSAGE = "Please select an action:  - %s (START) or %s - (EXIT)";
     public static final String ENDING_MESSAGE = "The simulation is complete.";
+    public static final String INCORRECT_INPUT_MESSAGE = "Incorrect input. Please try again following the instructions.";
     private static final String EXIT = "E";
     private static final String NEXT = "N";
     private static final String START_STOP = "S";
@@ -73,7 +74,7 @@ public class Simulation {
             }else
                 stop();
         }
-        ConsoleMessagesRenderer.output(ENDING_MESSAGE);
+        WorldConsoleRenderer.output(ENDING_MESSAGE);
     }
 
     private void waitingOfIterationTime(){
@@ -125,7 +126,7 @@ public class Simulation {
                     chooseAnAction();
                 }
             }else
-                ConsoleMessagesRenderer.output(ConsoleMessagesRenderer.INCORRECT_INPUT_MESSAGE);
+                WorldConsoleRenderer.output(INCORRECT_INPUT_MESSAGE);
         }
     }
 
@@ -139,18 +140,18 @@ public class Simulation {
                 case EXIT -> exit();
             }
         }else
-            ConsoleMessagesRenderer.output(ConsoleMessagesRenderer.INCORRECT_INPUT_MESSAGE);
+            WorldConsoleRenderer.output(INCORRECT_INPUT_MESSAGE);
     }
 
     private void startingInteractionWithUser(){
         while (!finished&&!running){
-            ConsoleMessagesRenderer.output(String.format(STRING_MESSAGE, START_STOP, EXIT));
+            WorldConsoleRenderer.output(String.format(STRING_MESSAGE, START_STOP, EXIT));
             userPressed = scanner.nextLine().toUpperCase();
 
             switch (userPressed){
                 case START_STOP ->running();
                 case EXIT -> exit();
-                default -> ConsoleMessagesRenderer.output(ConsoleMessagesRenderer.INCORRECT_INPUT_MESSAGE);
+                default -> WorldConsoleRenderer.output(INCORRECT_INPUT_MESSAGE);
             }
         }
     }
