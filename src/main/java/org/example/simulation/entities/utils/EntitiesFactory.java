@@ -1,4 +1,4 @@
-package org.example.simulation.entities.Utils;
+package org.example.simulation.entities.utils;
 
 import org.example.simulation.entities.Entity;
 import org.example.simulation.entities.creatures.Herbivore;

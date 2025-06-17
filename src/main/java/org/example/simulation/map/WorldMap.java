@@ -57,6 +57,11 @@ public class WorldMap {
         return entity;
     }
 
+    public boolean isCoordinatesAvailable(Coordinates current) {
+        return current.row <= row && current.row >= MIN_COORDINATES_OF_THE_WORLD &&
+                current.column <= column && current.column >= MIN_COORDINATES_OF_THE_WORLD;
+    }
+
     private boolean isCoordinatesValid(Coordinates coordinates) {
         if (!isCoordinatesAvailable(coordinates)&& getEntity(coordinates)!=null ) {
             throw new IllegalArgumentException();
@@ -64,9 +69,6 @@ public class WorldMap {
         return true;
     }
 
-    public boolean isCoordinatesAvailable(Coordinates current) {
-        return current.row <= row && current.row >= MIN_COORDINATES_OF_THE_WORLD &&
-                current.column <= column && current.column >= MIN_COORDINATES_OF_THE_WORLD;
-    }
+
 
 }

@@ -3,7 +3,7 @@ package org.example.simulation;
 import org.example.simulation.actions.*;
 import org.example.simulation.actions.utils.Days;
 import org.example.simulation.map.WorldMap;
-import org.example.simulation.entities.Utils.EntitiesFactory;
+import org.example.simulation.entities.utils.EntitiesFactory;
 
 import java.util.List;
 
@@ -24,6 +24,9 @@ public final class SimulationFactory implements SimulationCreator {
     }
 
     public SimulationFactory(int row, int column) {
+        if(!isRowAndColumnValid(row, column)){
+            throw new IllegalArgumentException();
+        }
         this.world = new WorldMap(row, column);
         this.spawnData = new EntitiesFactory();
         this.initActions = List.of(new SpawnEntityAction(spawnData), new SimulationRenderAction(days));
@@ -31,6 +34,9 @@ public final class SimulationFactory implements SimulationCreator {
     }
 
     public SimulationFactory(int row, int column, double predator, double herbivore, double grass, double tree, double rock) {
+        if(!isRowAndColumnValid(row, column)&& !isSpawnsValid(List.of(predator,herbivore,grass,tree,rock))){
+            throw new IllegalArgumentException();
+        }
         this.world = new WorldMap(row, column);
         this.spawnData = new EntitiesFactory(predator, herbivore, grass, tree, rock);
         this.initActions = List.of(new SpawnEntityAction(spawnData), new SimulationRenderAction(days));
@@ -41,4 +47,20 @@ public final class SimulationFactory implements SimulationCreator {
     public Simulation createSimulation() {
         return new Simulation(world,initActions,turnActions);
     }
+
+    private boolean isSpawnsValid(List<Double> spawns) {
+        boolean validFlag = true;
+        for(double e:spawns){
+            if (e < 0) {
+                validFlag = false;
+                break;
+            }
+        }
+        return validFlag;
+    }
+
+    private boolean isRowAndColumnValid(int row, int column) {
+        return row > 0 && column > 0;
+    }
+
 }

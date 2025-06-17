@@ -8,6 +8,7 @@ import org.example.simulation.SimulationFactory;
 public class Main {
 
     public static void main(String[] args) {
+
         SimulationCreator simulationCreator = new SimulationFactory();
         Simulation simulation = simulationCreator.createSimulation();
         simulation.startSimulation();

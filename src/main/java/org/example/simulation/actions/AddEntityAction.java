@@ -5,7 +5,7 @@ import org.example.simulation.entities.creatures.Herbivore;
 import org.example.simulation.entities.staticEntities.Grass;
 import org.example.simulation.map.Coordinates;
 import org.example.simulation.map.WorldMap;
-import org.example.simulation.entities.Utils.EntitiesFactory;
+import org.example.simulation.entities.utils.EntitiesFactory;
 
 import java.util.Map;
 
