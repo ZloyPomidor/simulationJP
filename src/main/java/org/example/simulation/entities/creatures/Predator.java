@@ -7,7 +7,7 @@ import org.example.simulation.entities.Entity;
 public class Predator extends Creature{
     private static final int DEFAULT_HP_VALUE = 5;
     private static final int HP_MAX_VALUE = 5;
-    private static final int DEFAULT_SPEED = 2;
+    private static final int DEFAULT_SPEED = 1;
     private static final Class<? extends Entity> DEFAULT_GOAL = Herbivore.class;
     private static final int ATTACK_POWER = 2;
 
