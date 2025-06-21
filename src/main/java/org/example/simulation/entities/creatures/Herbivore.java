@@ -2,7 +2,7 @@ package org.example.simulation.entities.creatures;
 
 import org.example.simulation.map.Coordinates;
 import org.example.simulation.entities.Entity;
-import org.example.simulation.entities.staticEntities.Grass;
+import org.example.simulation.entities.static_entities.Grass;
 import org.example.simulation.map.WorldMap;
 
 public class Herbivore extends Creature{

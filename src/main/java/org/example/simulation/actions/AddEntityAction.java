@@ -2,10 +2,10 @@ package org.example.simulation.actions;
 
 import org.example.simulation.entities.Entity;
 import org.example.simulation.entities.creatures.Herbivore;
-import org.example.simulation.entities.staticEntities.Grass;
+import org.example.simulation.entities.static_entities.Grass;
 import org.example.simulation.map.Coordinates;
 import org.example.simulation.map.WorldMap;
-import org.example.simulation.entities.utils.EntitiesFactory;
+import org.example.simulation.entities.entities_factory.EntitiesFactory;
 
 import java.util.Map;
 

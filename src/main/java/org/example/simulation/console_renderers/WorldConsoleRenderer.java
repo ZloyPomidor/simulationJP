@@ -1,4 +1,4 @@
-package org.example.simulation.consoleRenderers;
+package org.example.simulation.console_renderers;
 
 import org.example.simulation.entities.Entity;
 import org.example.simulation.map.Coordinates;

@@ -1,7 +1,7 @@
-package org.example.simulation.pathFinder;
+package org.example.simulation.path_finder;
 
-import org.example.simulation.pathFinder.asturAlgorithm.AStar;
-import org.example.simulation.pathFinder.asturAlgorithm.GoalHasBeenNotFoundedException;
+import org.example.simulation.path_finder.asturAlgorithm.AStar;
+import org.example.simulation.path_finder.asturAlgorithm.GoalHasBeenNotFoundedException;
 import org.example.simulation.entities.creatures.Creature;
 import org.example.simulation.map.Coordinates;
 import org.example.simulation.map.WorldMap;

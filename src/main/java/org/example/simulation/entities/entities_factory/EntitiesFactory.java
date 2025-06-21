@@ -1,11 +1,11 @@
-package org.example.simulation.entities.utils;
+package org.example.simulation.entities.entities_factory;
 
 import org.example.simulation.entities.Entity;
 import org.example.simulation.entities.creatures.Herbivore;
 import org.example.simulation.entities.creatures.Predator;
-import org.example.simulation.entities.staticEntities.Grass;
-import org.example.simulation.entities.staticEntities.Rock;
-import org.example.simulation.entities.staticEntities.Tree;
+import org.example.simulation.entities.static_entities.Grass;
+import org.example.simulation.entities.static_entities.Rock;
+import org.example.simulation.entities.static_entities.Tree;
 import org.example.simulation.map.WorldMap;
 
 import java.lang.reflect.Field;

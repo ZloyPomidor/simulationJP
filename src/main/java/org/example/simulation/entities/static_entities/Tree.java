@@ -1,4 +1,4 @@
-package org.example.simulation.entities.staticEntities;
+package org.example.simulation.entities.static_entities;
 
 import org.example.simulation.entities.Entity;
 

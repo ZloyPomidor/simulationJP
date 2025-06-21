@@ -3,7 +3,7 @@ package org.example.simulation;
 import org.example.simulation.actions.*;
 import org.example.simulation.actions.utils.Days;
 import org.example.simulation.map.WorldMap;
-import org.example.simulation.entities.utils.EntitiesFactory;
+import org.example.simulation.entities.entities_factory.EntitiesFactory;
 
 import java.util.List;
 

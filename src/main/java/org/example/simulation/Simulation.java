@@ -1,6 +1,6 @@
 package org.example.simulation;
 
-import org.example.simulation.consoleRenderers.WorldConsoleRenderer;
+import org.example.simulation.console_renderers.WorldConsoleRenderer;
 import org.example.simulation.map.WorldMap;
 import org.example.simulation.actions.Action;
 

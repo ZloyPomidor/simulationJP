@@ -1,8 +1,8 @@
-package org.example.simulation.pathFinder.asturAlgorithm;
+package org.example.simulation.path_finder.asturAlgorithm;
 
 import org.example.simulation.entities.creatures.Creature;
-import org.example.simulation.entities.staticEntities.Rock;
-import org.example.simulation.entities.staticEntities.Tree;
+import org.example.simulation.entities.static_entities.Rock;
+import org.example.simulation.entities.static_entities.Tree;
 import org.example.simulation.map.Coordinates;
 import org.example.simulation.entities.Entity;
 import org.example.simulation.map.WorldMap;
