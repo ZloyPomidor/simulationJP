@@ -1,4 +1,4 @@
-package org.example.simulation.path_finder.asturAlgorithm;
+package org.example.simulation.astur_algorithm;
 
 import org.example.simulation.map.Coordinates;
 

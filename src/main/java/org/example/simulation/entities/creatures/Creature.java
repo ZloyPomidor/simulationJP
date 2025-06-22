@@ -3,7 +3,7 @@ package org.example.simulation.entities.creatures;
 import org.example.simulation.map.Coordinates;
 import org.example.simulation.entities.Entity;
 import org.example.simulation.map.WorldMap;
-import org.example.simulation.path_finder.PathFinder;
+import org.example.simulation.utils.PathFinder;
 
 
 public abstract class Creature extends Entity {
